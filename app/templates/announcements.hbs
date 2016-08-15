@@ -1,0 +1,13 @@
+<ul>
+  {{#each model as |announcement|}}
+    <li>{{announcement.date}}</li>
+    <ul><li>{{announcement.text}}</li></ul>
+    <button {{action 'destroyAnnouncement' announcement}}>Delete</button>
+  {{/each}}
+</ul>
+
+{{new-announcements save0="save4"}}
+
+{{#link-to 'about'}}About{{/link-to}}
+{{#link-to 'index'}}Home{{/link-to}}
+{{#link-to 'contact'}}Click here to contact us.{{/link-to}}
